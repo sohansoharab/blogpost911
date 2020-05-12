@@ -24,7 +24,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'template')
 SECRET_KEY = 'czdc@%ughb8bw4=r^lgu#q56(lk&yw!nbl61oc(044qf*29-s='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['blogpost911.herokuapp.com']
 
@@ -121,9 +121,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 import dj_database_url
-prod_db  =  dj_database_url.config(conn_max_age=500)
+prod_db  =  dj_database_url.config()
 DATABASES['default'].update(prod_db)
