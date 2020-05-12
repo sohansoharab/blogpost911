@@ -1,0 +1,18 @@
+{% extends 'blogapp/base.html' %}
+{% block content %}
+<div class="container">
+    {% if main_post %}
+        <div class="mt-3 row">
+            <h2 class="display-4 mb-3">{{ main_post.title }}</h2>
+            <h3 class="text-muted mb-2">{{ main_post.author.username }}</h3>
+            <hr>
+            <p>{{ main_post.description }}</p>
+            <br>
+            <a href="{% url 'home' %}" class="col-sm-6 btn btn-outline-info">Back to the pavilion?</a>
+            <a href="{% url 'post' %}" class="col-sm-6 btn btn-outline-info">Returning to the previuos page?</a>
+        </div>
+    {% else %}
+        <h4 class="display-4">Post is not available right now.</h4>
+    {% endif %}
+</div>
+{% endblock %}

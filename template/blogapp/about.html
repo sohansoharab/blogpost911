@@ -1,0 +1,25 @@
+{% extends 'blogapp/base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row mt-3">
+        <div class="card col-sm-8 align-self-center">
+            <div class="card-body">
+                <h2 class="card-title">
+                   About Me
+                </h2>
+                <div class="card-text">
+                    <h3 class="text-muted">
+                        {{ name }}
+                    </h3>
+                    <h3 class="text-muted">
+                        {{ email }}
+                    </h3>
+                    <h3 class="text-muted">
+                        {{ country }}
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
